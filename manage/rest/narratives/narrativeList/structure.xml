@@ -1,0 +1,4 @@
+<structure name="narrativeList">
+    <structure collectionName="narratives" definition="nabu.providers.audit.narrator.model.narrative" maxOccurs="unbounded" minOccurs="0" name="narratives"/>
+    <structure definition="nabu.services.jdbc.types.Page" minOccurs="0" name="page"/>
+</structure>

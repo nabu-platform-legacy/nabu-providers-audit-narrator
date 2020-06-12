@@ -1,0 +1,9 @@
+<jdbcService xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<outputDefinition>nabu.providers.audit.narrator.model.narrative</outputDefinition>
+	<sql>select *
+from ~narratives n
+where (:q is null or lower(n.root_service_id) like '%' || lower(:q) || '%'
+	or lower(n.service_context) like '%' || lower(:q) || '%'
+	or lower(n.alias) like '%' || lower(:q) || '%'
+	or n.correlation_id = :q)</sql>
+</jdbcService>
