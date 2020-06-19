@@ -2,8 +2,10 @@
     <structure name="input"/>
     <structure name="output"/>
     <structure definition="nabu.providers.audit.narrator.types.narratorState" name="state"/>
-    <field name="narration" type="java.lang.String"/>
     <field minOccurs="0" name="hierarchySize" type="java.lang.Integer"/>
     <structure collectionName="narratives" definition="nabu.providers.audit.narrator.model.narrative" name="narrative"/>
     <field minOccurs="0" name="narrationSize" type="java.lang.Integer"/>
+    <structure definition="nabu.utils.types.TypeDescription" minOccurs="0" name="description"/>
+    <structure collectionName="narrativeProperties" definition="nabu.providers.audit.narrator.model.narrativeProperty" name="narrativeProperty"/>
+    <structure collectionName="narrativeProperties" definition="nabu.providers.audit.narrator.model.narrativeProperty" maxOccurs="unbounded" minOccurs="0" name="narrativeProperties"/>
 </structure>
