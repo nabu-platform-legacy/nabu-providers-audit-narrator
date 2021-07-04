@@ -1,6 +1,7 @@
 <sequence xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 		disabled="false"
-		id="1c0d4bb3-3979-4d62-8b41-650bfc260bf1">
+		id="1c0d4bb3-3979-4d62-8b41-650bfc260bf1"
+		transactionVariable="transactionId">
 	<steps xsi:type="be.nabu.libs.services.vm.step.Map"
 			comment="Get current state"
 			disabled="false"
@@ -497,6 +498,15 @@
 						<from>narrative</from>
 						<to>instances[0]</to>
 					</steps>
+					<steps xsi:type="be.nabu.libs.services.vm.step.Link"
+							disabled="false"
+							id="3cf065fa-d890-44f2-bb3c-973b396c3634"
+							mask="false"
+							optional="false"
+							fixedValue="false">
+						<from>transactionId</from>
+						<to>transaction</to>
+					</steps>
 				</steps>
 			</steps>
 			<steps xsi:type="be.nabu.libs.services.vm.step.For"
@@ -628,6 +638,15 @@
 							fixedValue="false">
 						<from>narrativeProperties</from>
 						<to>instances</to>
+					</steps>
+					<steps xsi:type="be.nabu.libs.services.vm.step.Link"
+							disabled="false"
+							id="f2649321-5ace-4f48-9140-650dfb760f88"
+							mask="false"
+							optional="false"
+							fixedValue="false">
+						<from>transactionId</from>
+						<to>transaction</to>
 					</steps>
 				</steps>
 			</steps>
